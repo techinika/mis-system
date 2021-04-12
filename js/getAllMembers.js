@@ -1,4 +1,5 @@
 const members = document.getElementById('membersCollection')
+let feed = document.getElementById('feedbackp')
 
 function displayMembers(doc){
 
@@ -32,6 +33,11 @@ function displayMembers(doc){
 }
 
 db.collection('members').onSnapshot(snapshot => {
+    if(snapshot.size === 0){
+        feed.style.display = 'block'
+        feed.style.backgroundColor = 'red'
+        feed.innerHTML = "No members!"
+    }
     let changes = snapshot.docChanges();
     changes.forEach(change => {
         if(change.type == 'added'){

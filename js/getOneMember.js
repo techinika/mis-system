@@ -11,11 +11,11 @@ const viewMember = (doc) => {
 
     image.src = doc.image;
 
-    name.innerHTML = doc.name;
-    email.innerHTML = doc.email;
+    name.innerHTML = doc.name || "Provide user's name";
+    email.innerHTML = doc.email || "No email provided";
     phone.innerHTML = doc.phoneNumber || "No phone number provided";
-    ide.innerHTML = doc.identity;
-    role.innerHTML = doc.role;
+    ide.innerHTML = doc.identity || "No ID provided";
+    role.innerHTML = doc.role || "No role provided";
     description.innerHTML = doc.description || "No description provided";
 }
 

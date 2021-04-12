@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Update member</title>
+
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Hello, Admin!</h1>
+    <p class="lead">This is your dashboard and from here, you can manage everything.</p>
+    <hr class="my-4">
+    <p>You can either check your info or your share details. If you think there is a problem, please report to admin. If everything is fine, take a look and then logout.</p>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="list-group">
+        <li class="list-group-item"><a href="admin.html" style="text-decoration: none;color: black;">Summary</a></li>
+        <li class="list-group-item active"><a href="members.html" style="text-decoration: none;color: #fff;">Members</a></li>
+        <li class="list-group-item"><a href="shares.html" style="text-decoration: none;color: black;">Shares</a></li>
+        <li class="list-group-item">Projects</li>
+        <li class="list-group-item">Reports</li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+      
+          <h5 class="modal-title" style="background-color: black;color: #fff;padding: 10px;">Update member</h5>
+      <hr>
+
+      <form >
+        <div>
+          <p style="text-align: center;background-color: green;padding: 10px;color: #fff;border-radius: 4px;display: none;" id="feedback"></p>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Profile Picture</label>
+          <input type="file" class="form-control image" id="exampleFormControlInput1" name="image">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Name</label>
+          <input type="text" class="form-control name" id="exampleFormControlInput1" placeholder="Ndubaha Jean D'amour" name="name">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Email address</label>
+          <input type="email" class="form-control email" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">ID number</label>
+          <input type="number" class="form-control identity" id="exampleFormControlInput1" placeholder="1199919929292928" name="identity">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Phone number</label>
+          <input type="number" class="form-control phone" id="exampleFormControlInput1" placeholder="078.../072..." name="phone">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Choose his/her role</label>
+            <select class="form-control role" id="exampleFormControlSelect1" name="role">
+              <option>Manager</option>
+              <option>Author</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Description</label>
+          <textarea class="form-control description" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+        </div>
+        <!-- <div class="form-group">
+          <label for="exampleFormControlInput1">Beneficiary Name</label>
+          <input type="text" class="form-control beneficiary" id="exampleFormControlInput1" placeholder="Ndubaha Jean D'amour" name="benname">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Beneficiary phone number</label>
+          <input type="number" class="form-control beneficiary-phone" id="exampleFormControlInput1" placeholder="078.../072..." name="benphone">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Beneficiary relationship</label>
+          <input type="text" class="form-control relationship" id="exampleFormControlInput1" placeholder="Parent" name="benrel">
+        </div> -->
+        <div class="btn-deck">
+        
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="submit-btn">Update</button>
+        <a type="button" href="members.html" class="btn btn-secondary btn-lg btn-block" >Cancel</a>
+
+      </div>
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-storage.js"></script>
+<script src="../js/firebase.js"></script>
+<script src="../js/editMember.js"></script>
+</body>
+</html>

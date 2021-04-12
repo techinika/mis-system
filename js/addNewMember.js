@@ -60,7 +60,11 @@ const formValidating = () =>{
                     setTimeout(() => {
                         window.location.href = '../manager/members.html'
                     }, 5000);
-                }).catch(err => console.log(err.message))
+                }).catch(err => {
+                    feed.style.display = 'block';
+                    feed.style.backgroundColor = "red";
+                    feed.innerHTML = err.message
+                })
             });
         });
         
